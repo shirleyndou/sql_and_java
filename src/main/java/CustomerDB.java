@@ -5,7 +5,7 @@ public class CustomerDB {
     private static final String PASSWORD = "password";
     private static final String CONN_STRING = "jdbc:postgresql://localhost:5432/Umuzi";
 
-    public void sqlQuery(){
+    public void sqlQuery() {
         try {
             Connection con = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
             PreparedStatement stmt = con.prepareStatement("SELECT * FROM Customers");
@@ -21,13 +21,13 @@ public class CustomerDB {
         }
     }
 
-    public void firstNameSQL(){
-        try{
+    public void sqlQuery2() {
+        try {
             Connection con = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
             PreparedStatement stmt = con.prepareStatement("SELECT FirstName FROM Customers");
             ResultSet rs = stmt.executeQuery();
 
-            while(rs.next()){
+            while (rs.next()) {
                 System.out.println(rs.getString(1));
             }
 
@@ -37,4 +37,20 @@ public class CustomerDB {
         }
     }
 
+    public void sqlQuery3() {
+        try {
+            Connection con = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
+            PreparedStatement stmt = con.prepareStatement("SELECT FirstName FROM Customers WHERE CustomerID =1");
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                System.out.println(rs.getString(1));
+            }
+
+        } catch (Exception e) {
+            //noinspection ThrowablePrintedToSystemOut
+            System.out.println(e);
+        }
+
+    }
 }
