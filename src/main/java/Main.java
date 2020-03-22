@@ -7,5 +7,10 @@ public class Main {
        customers.sqlQuery2();
        System.out.println("----------------------------------");
        customers.sqlQuery3();
+        System.out.println("----------------------------------");
+        //customers.sqlQuery4();
+
+        OrdersDB orders = new OrdersDB();
+        orders.sqlQueryO();
     }
 }

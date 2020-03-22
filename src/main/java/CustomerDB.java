@@ -53,4 +53,22 @@ public class CustomerDB {
         }
 
     }
+
+   /* public void sqlQuery4() {
+        try {
+            Connection con = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
+            PreparedStatement stmt = con.prepareStatement("UPDATE Customers SET FirstName = 'Lerato' WHERE CustomerID = 1");
+            ResultSet rs = stmt.executeQuery();
+
+            System.out.println(rs);
+          *//*  while (rs.next()) {
+                System.out.println(rs.getString(1));
+            }*//*
+
+        } catch (Exception e) {
+            //noinspection ThrowablePrintedToSystemOut
+            System.out.println(e);
+        }
+
+    }*/
 }
