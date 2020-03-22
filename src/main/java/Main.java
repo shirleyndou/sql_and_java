@@ -12,5 +12,8 @@ public class Main {
 
         OrdersDB orders = new OrdersDB();
         orders.sqlQueryO();
+
+        PaymentsDB payments = new PaymentsDB();
+        payments.sqlQueryP();
     }
 }
