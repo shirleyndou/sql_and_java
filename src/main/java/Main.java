@@ -14,7 +14,7 @@ public class Main {
             ResultSet rs = stmt.executeQuery();
 
         } catch (SQLException e) {
-            System.out.println(e);;
+            System.err.println(e);;
         }
     }
 }
