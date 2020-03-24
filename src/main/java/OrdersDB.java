@@ -12,7 +12,7 @@ public class OrdersDB {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                System.out.println(rs.getString(1)+ " " + rs.getString(7));
+                System.out.println(rs.getString(1));
             }
         } catch (SQLException e) {
             //noinspection ThrowablePrintedToSystemOut

@@ -12,7 +12,7 @@ public class PaymentsDB {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                System.out.println(rs.getString(4));
+                System.out.println(rs.getString(1));
             }
         } catch (SQLException e) {
             //noinspection ThrowablePrintedToSystemOut

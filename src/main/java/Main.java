@@ -2,18 +2,22 @@
 public class Main {
     public static void main(String[] args) {
        CustomerDB customers = new CustomerDB();
+        System.out.println("-----------------1-----------------");
        customers.sqlQuery();
-       System.out.println("----------------------------------");
+       System.out.println("------------------2----------------");
        customers.sqlQuery2();
-       System.out.println("----------------------------------");
+       System.out.println("------------------3----------------");
        customers.sqlQuery3();
-        System.out.println("----------------------------------");
-        //customers.sqlQuery4();
+        System.out.println("-----------------4-----------------");
+        customers.sqlQuery4();
+        System.out.println("-----------------5-----------------");
 
         OrdersDB orders = new OrdersDB();
+        System.out.println("-----------------6------------------");
         orders.sqlQueryO();
 
         PaymentsDB payments = new PaymentsDB();
+        System.out.println("-----------------7------------------");
         payments.sqlQueryP();
     }
 }
