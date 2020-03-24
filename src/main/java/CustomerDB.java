@@ -93,7 +93,7 @@ public class CustomerDB {
     public void sqlQuery5(){
         try{
             Connection con = DriverManager.getConnection(CONN_STRING, USERNAME,PASSWORD);
-            PreparedStatement stmt = con.prepareStatement(" DELETE FROM Customers WHERE CustomerID = 2");
+            PreparedStatement stmt = con.prepareStatement("DELETE FROM Customers WHERE CustomerID = 2");
             ResultSet rs = stmt.executeQuery();
             out.println(rs);
 
