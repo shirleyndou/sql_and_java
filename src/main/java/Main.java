@@ -8,7 +8,7 @@ public class Main {
        customers.sqlQuery2();
        System.out.println("------------------3----------------");
        customers.sqlQuery3();
-       /* System.out.println("-----------------4-----------------");
+       /* System.out.println("---------------4-----------------");
         customers.sqlQuery4();
         System.out.println("-----------------5-----------------");
         customers.sqlQuery();
@@ -20,5 +20,6 @@ public class Main {
         PaymentsDB payments = new PaymentsDB();
         System.out.println("-----------------7------------------");
         payments.sqlQuery7();
+        System.out.println("---------------END------------------");
     }
 }
