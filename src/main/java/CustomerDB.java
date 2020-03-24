@@ -67,8 +67,20 @@ public class CustomerDB {
 
         } catch (Exception e) {
             //noinspection ThrowablePrintedToSystemOut
-            System.out.println(e);
+            System.err.println(e);
         }
 
+    }
+
+    public void sqlQuery5(){
+        try{
+            Connection con = DriverManager.getConnection(CONN_STRING, USERNAME,PASSWORD);
+            PreparedStatement stmt = con.prepareStatement(" DELETE FROM Customers WHERE CustomerID = 2");
+            ResultSet rs = stmt.executeQuery();
+            System.out.println(rs);
+
+        } catch (Exception e) {
+            System.err.println(e);
+        }
     }
 }
