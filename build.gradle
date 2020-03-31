@@ -17,41 +17,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 
-    compileOnly(group: 'org.projectlombok', name: 'lombok', version: '1.16.18')
-    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.3.RELEASE')
-    compile(group: 'org.springframework.data', name: 'spring-data-commons', version: '1.13.3.RELEASE')
-    compile(group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.3.0')
-    compile(group: 'com.zaxxer', name: 'HikariCP', version: '2.6.1')
-    compile(group: 'org.postgresql', name: 'postgresql', version: '42.0.0')
-    compile(group: 'org.liquibase', name: 'liquibase-core', version: '3.5.3')
-    compile(group: 'com.typesafe', name: 'config', version: '1.3.1')
-    compile(group: 'one.util', name: 'streamex', version: '0.6.5')
-
-    testCompileOnly(group: 'org.projectlombok', name: 'lombok', version: '1.16.18')
-    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.3.RELEASE')
-    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.5.3.RELEASE')
-    testCompile(group: 'io.rest-assured', name: 'rest-assured', version: '3.0.2')
+        implementation 'mysql:mysql-connector-java:6.0.6'
+        compile group: 'org.postgresql', name: 'postgresql', version: '42.0.0'
 }
-
-/*postgres {
-    port = 5432
-}*/
-
-task liquibaseEmbedded(type: JavaExec) {
-//    dependsOn startPostgres
-
-    group = 'Liquibase'
-    description = 'Applies database changesets to running embedded PostgreSQL server.'
-
-    classpath = sourceSets.main.compileClasspath
-    main = 'liquibase.integration.commandline.Main'
-    args = ['--url', "jdbc:postgresql://localhost/Umuzi",
-            '--username', "postgres",
-            '--password', "password"
-            /*'--changeLogFile', "${projectDir}/src/main/liquibase/db/changelog/db.changelog-master.xml",
-            'update'*/]
-}
-
 
 
 test {
